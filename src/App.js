@@ -35,10 +35,10 @@ function App() {
   const [completed, setCompleted] = useState(undefined);
   useEffect(() => {
     setTimeout(() => {
-      fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((response) => response.json())
-        .then((json) => {
-          setData(json);
+      fetch("./images/forest.png" || "./images/bird1.png" || "./images/bird2.png" || "./images/rocks.png" || "./images/water.png")
+        .then((response) => response.ok)
+        .then((outBuff) => {
+          setData(outBuff);
           setLoading(true);
 
           setTimeout(() => {
