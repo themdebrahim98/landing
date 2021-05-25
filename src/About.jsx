@@ -2,10 +2,19 @@ import React from 'react';
 import './About.css';
 import Footer from './Footer';
 import Carousel from './Carousel.js';
-import about from './images/about.svg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { IconButton } from '@material-ui/core';
+import Lottie from 'react-lottie';
+import student from './json/student.json'
 
+const aniStudent = {
+    loop: true,
+    autoplay: true,
+    animationData: student,
+    rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+    }
+};
 function About() {
     return (
         <div className="about">
@@ -16,18 +25,20 @@ function About() {
                         <p class="text-center sub-heading">Grow idea with us</p>
                         <div className="row">
                             <div className="col-md-6 col-12">{/*left side*/}
-                            <img src={about} alt="" />
+                                {/*<img src={about} alt="" />*/}
+                                <Lottie options={aniStudent} />
+
                             </div>
-                            <div className="col-md-6 col-12 d-flex justify-content-center align-items-center flex-column">
+                            <div className="about-side col-md-6 col-12 d-flex justify-content-center align-items-center flex-column">
                                 {/*right side*/}
                                 <div class="section-title">
                                     <h1 class="title">introduction</h1>
                                     <h2 class="subtitle"> Who Are We? <hr /></h2>
                                 </div>
                                 <div class="intro-content">
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, facere atque. Maxime nobis eligendi totam, corrupti error aut quos ratione, possimus rerum eum asperiores repellat non quo, sunt eius mollitia!</p>
+                                    <p>We are Computer Science Engineering and Information Technology Students in MAKAUT,W.B. We opened a community together. So, we basically work on the website development. We aslo work as a freelancer.</p>
                                     <ul class="list-unstyled">
-                                        <li><IconButton><i class="fas fa-check"></i></IconButton> Our all products are high quality</li>
+                                        <li><IconButton><i class="fas fa-check"></i></IconButton> Lorem ipsum dolor sit amet. </li>
                                         <li><IconButton><i class="fas fa-check"></i></IconButton>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                                         <li><IconButton><i class="fas fa-check"></i></IconButton> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
                                         <li><IconButton><i class="fas fa-check"></i></IconButton>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eos!</li>

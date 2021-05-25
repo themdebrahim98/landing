@@ -27,7 +27,7 @@
     background-color: #00778c;
 }
 .section-title{
-  margin-bottom: 60px;
+  margin-bottom: 2rem;
   text-align: center;
 }
 .section-title .title {
@@ -58,7 +58,7 @@
   margin: 0;
 }
 .intro-content p {
-  font-size: 20px;
+  font-size: 1.5rem;
   line-height: 26px;
   color: #094b65;
   margin: 0;
@@ -68,7 +68,7 @@
   margin: 30px 0 0;
 }
 .intro-content ul li {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 26px;
   color: #094b65;
   margin-bottom: 15px;
@@ -82,7 +82,7 @@
   display: inline-block;
   color: #00778c;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   line-height: 26px;
   position: absolute;
@@ -95,6 +95,15 @@
   .service-style .sub-heading,
   .contact-style .sub-heading {
     font-size: 1em;
+  }
+  .section-title{
+    margin-bottom: 0;
+  }
+  .about-side{
+    padding-top: 2rem;
+  }
+  .intro-content p {
+    font-size: 20px;
   }
 }
 /*features section start*/

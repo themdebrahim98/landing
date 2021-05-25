@@ -7,8 +7,27 @@ import bird2 from './images/bird2.png';
 import forest from './images/forest.png';
 import rocks from './images/rocks.png';
 import water from './images/water.png';
-import Frame from './images/frame.svg';
-import Why from './images/why.svg';
+import Lottie from 'react-lottie';
+import development from './json/development.json';
+import code from './json/codeblock.json';
+
+
+const aniDev = {
+    loop: true,
+    autoplay: true,
+    animationData: development,
+    rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+    }
+};
+const aniCode = {
+    loop: true,
+    autoplay: true,
+    animationData: code,
+    rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+    }
+};
 
 function Home() {
     const [offsetY, setOffsetY] = useState(0);
@@ -41,7 +60,7 @@ function Home() {
                                     <li><p>This web development community follows one unique motto "Let's Code Together". In a good spirit, We welcome all programmers to join us and showcase talent as well as grow with us.</p></li></ol>
                                 </div>
                                 <div className="sec2 col-md-6 col-12">
-                                    <img src={Frame} alt="" />
+                                    <Lottie options={aniDev} />
                                 </div>
                             </div>
                         </div>
@@ -53,7 +72,7 @@ function Home() {
                         <div className="col-md-12 col-12 mx-auto">
                             <div className="row d-flex justify-content-center align-items-center">
                                 <div className="sec2 col-md-6 col-12">
-                                    <img src={Why} alt="" />
+                                    <Lottie options={aniCode} />
                                 </div>
                                 <div className="sec1 col-md-6 col-12 order-md-0 order-1">
                                     <h2><span>Why R-E-P-L ?</span></h2>
