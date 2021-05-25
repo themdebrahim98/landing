@@ -110,4 +110,9 @@ ol {
   .sec2 h2 {
     font-size: 1.8rem;
   }
+  .button1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

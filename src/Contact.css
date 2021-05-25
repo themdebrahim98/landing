@@ -3,9 +3,6 @@
 }
 .container-contact {
   position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #094b65;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -21,9 +18,10 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 21px 2px rgb(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 100;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0.3rem 0.3rem 1rem #000;
 }
 
 .container-contact .contact-form {
@@ -43,7 +41,7 @@
 }
 .container-contact .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #149279);
+  background: linear-gradient(135deg, transparent 20%, #5BC9AD);
   position: absolute;
 }
 
@@ -61,7 +59,7 @@
 }
 
 .container-contact form {
-  padding: 50px 40px;
+  padding: 2rem 0;
   position: relative;
   overflow: hidden;
   z-index: 10;
@@ -78,8 +76,17 @@
 .container-contact form .input-container {
   position: relative;
   margin: 1rem 0;
+  width: 80%;
 }
-
+.container-contact form input::placeholder,
+.container-contact form textarea::placeholder {
+  color: #fff;
+}
+.container-contact form input, .container-contact form textarea{
+  background-color: rgba(255, 254, 253, 0.03)!important;
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0.2rem 0.3rem 1rem #111;
+}
 .container-contact form .input {
   width: 100%;
   outline: none;
@@ -100,29 +107,11 @@
   overflow-y: auto;
   resize: none;
 }
-
-.container-contact form .input-container label {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 400;
-  z-index: 1000;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.container-contact form .input-container.textarea label {
-  top: 10px;
-  transform: translateY(0);
-}
-
-.container-contact form .btn {
+.container-contact form .input-btn {
+  width: 40%;
   padding: 8px 17px;
   font-size: 1rem;
-  color: #004d7a;
+  color: #ddd;
   background: #ffff;
   border: 2px solid #fafafa;
   border-radius: 25px;
@@ -131,72 +120,15 @@
   transition: 0.3s;
 }
 
-.container-contact form .btn:hover {
+.container-contact form .input-btn:hover {
   background: transparent;
   color: #fff;
 }
-
-.container-contact form .input-container span {
-  position: absolute;
-  top: 0;
-  left: 25px;
-  transform: translateY(-50%);
-  font-size: 0.8rem;
-  padding: 0px 6px;
-  color: transparent;
-  z-index: 500;
-  pointer-events: none;
-}
-
-.container-contact form .input-container span::before,
-.container-contact form .input-container span::after {
-  content: "";
-  position: absolute;
-  width: 10%;
-  opacity: 0;
-  transition: 0.3s;
-  /* left:0; */
-  top: 50%;
-  /* width:100%; */
-  width: 50%;
-  height: 4px;
-  background: #004d7a;
-  transform: translateY(-50%);
-}
-
-.container-contact form .input-container span::before {
-  left: 50%;
-}
-
-.container-contact form .input-container span::after {
-  right: 50%;
-}
-
-.container-contact form .input-container.focus label {
-  top: 0;
-  transform: translateY(-50%);
-  left: 30px;
-  font-size: 0.8rem;
-}
-
-.container-contact form .input-container.focus span::before,
-.container-contact form .input-container.focus span::after {
-  width: 50%;
-  opacity: 1;
-}
-
 .contact-info {
   position: relative;
 }
 .contact-box {
   padding: 0px 30px;
-}
-
-.contact-info .title {
-  color: #149279;
-  margin-bottom: 20px;
-  font-size: 1.4rem;
-  font-weight: 700;
 }
 
 .contact-info .text {
@@ -212,27 +144,24 @@
 }
 .information {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.information .icon {
+.information .icon{
   font-size: 30px;
-  color: rgb(30, 112, 85);
+  color: #aaa;
   padding: 0px 10px;
 }
-
-.social-icon {
-  display: flex;
-  justify-content: center;
-  font-size: 40px;
-}
-.contact-info h4 {
-  color: #07475a;
-}
-.social-icon .media-icon {
-  padding: 0px 15px;
-}
-
-.social-icon .media-icon:hover {
-  transform: scale(1.05);
+.information .fa-facebook-f{ color: #4267B2; font-size: 30px;}
+.information .fa-linkedin-in{ color: #0077b5; font-size: 30px;}
+.information .fa-github{ color: #333; font-size: 30px;}
+@media (max-width: 600px) {
+  .container-contact .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-contact form .input-container{
+    
+  }
 }

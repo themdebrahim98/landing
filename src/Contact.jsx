@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import './Contact.css';
+import { IconButton } from '@material-ui/core';
 function Contact() {
     return (
         <div className="contact">
@@ -26,20 +27,21 @@ function Contact() {
                                 width="100%" height="200px" style={{ border: "0" }} allowfullscreen="" loading="lazy"></iframe>
                         </div>
                         <div className="contact-box">
-                            <h3 className="title">Let's get in touch.</h3>
+                            <h3 className="title">Address</h3>
                             <p className="text">Lorem ipsum dolor corrupti quia voluptas distinctio molestias maiores repellat inventore illo,eligendi est aut labore ex iure.</p>
                             <div className="info">
                                 <div className="information">
-                                    <p className='icon'><i className="fal fa-map-marked-alt"></i></p>
-                                    <p>Bakura, Puruliya west Bengal, 703234</p>
+                                    <p className='icon'><i className="fas fa-street-view"></i></p>
+                                    <p>MAKAUT Boy's Hostel, W.B</p>
                                 </div>
                                 <div className="information">
-                                    <p className='icon'><i className="fal fa-envelope"></i></p>
-                                    <p>arghadeep123@gmail.com</p>
+                                    <p className='icon'><i className="far fa-envelope"></i></p>
+                                    <p>repl.development@gmail.com</p>
                                 </div>
-                                <div className="information">
-                                    <p className='icon'><i className="fal fa-phone-alt"></i></p>
-                                    <p>9771298843</p>
+                                <div className="information d-flex justify-content-center">
+                                    <IconButton><a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a></IconButton>
+                                    <IconButton><a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a></IconButton>
+                                    <IconButton><a href="https://github.com"><i class="fab fa-github"></i></a></IconButton>
                                 </div>
                             </div>
                         </div>
@@ -51,26 +53,18 @@ function Contact() {
                         <form action="index.html">
                             <h3 className="title">Contact Us</h3>
                             <div className="input-container">
-                                <input type="text" name="name" className="input" />
-                                <label for="">Username</label>
-                                <span>Username</span>
+                                <input type="text" name="name" className="input" placeholder="Name" required />
                             </div>
                             <div className="input-container">
-                                <input type="email" name="email" className="input" />
-                                <label for="">Email</label>
-                                <span>Email</span>
+                                <input type="email" name="email" className="input" placeholder="Email" required />
                             </div>
                             <div className="input-container">
-                                <input type="tel" name="phone" className="input" />
-                                <label for="">Phone</label>
-                                <span>Phone</span>
+                                <input type="tel" name="phone" className="input" placeholder="Phone" required />
                             </div>
                             <div className="input-container textarea">
-                                <textarea name="massaeg" className="input"></textarea>
-                                <label for="">Massage</label>
-                                <span>Massage</span>
+                                <textarea name="massaeg" className="input" placeholder="Message" required />
                             </div>
-                            <input type="submit" value="send" className="btn" />
+                            <input type="submit" value="send" className="input-btn" />
                         </form>
                     </div>
                 </div>

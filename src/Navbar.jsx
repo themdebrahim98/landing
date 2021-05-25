@@ -21,7 +21,7 @@ class Navbar extends Component {
 
                         <li onClick={this.handelClick} style={{ transition: 'all 0.5s ease 0.2s' }}><NavLink exact activeClassName="active" to="/about"><IconButton>About</IconButton></NavLink></li>
 
-                        <li onClick={this.handelClick} style={{ transition: 'all 0.5s ease 0.2s' }}><NavLink exact activeClassName="active" to="/project"><IconButton>Project</IconButton></NavLink></li>
+                        <li onClick={this.handelClick} style={{ transition: 'all 0.5s ease 0.2s' }}><NavLink exact activeClassName="active" to="/project"><IconButton>Explore</IconButton></NavLink></li>
 
                         <li onClick={this.handelClick} style={{ transition: 'all 0.5s ease 0.2s' }}><NavLink exact activeClassName="active" to="/contact"><IconButton>Contact</IconButton></NavLink></li>
 
