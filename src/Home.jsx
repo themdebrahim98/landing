@@ -40,12 +40,12 @@ function Home() {
         <div className="home">
             <div className="section">
                 <h2 className="text" style={{ transform: `translateY(${offsetY * (-0.5)}%)` }} ><span>Let's Code Together on</span><br />webDev</h2>
-                <img src={bird1} alt="" className="bird1 img-fluid" style={{ left: `${offsetY * (2)}px`, top: `${offsetY * (-1.5)}px` }} />
-                <img src={bird2} alt="" className="bird2 img-fluid" style={{ top: `${offsetY * (-1.5)}px`, left: `${offsetY * (-5)}px` }} />
-                <img src={forest} alt="" className="forest img-fluid" style={{ top: `${offsetY * (0.25)}px` }} />
+                <img src={bird1} alt="" className="bird1" style={{ left: `${offsetY * (2)}px`, top: `${offsetY * (-1.5)}px` }} />
+                <img src={bird2} alt="" className="bird2" style={{ top: `${offsetY * (-1.5)}px`, left: `${offsetY * (-5)}px` }} />
+                <img src={forest} alt="" className="forest" style={{ top: `${offsetY * (0.25)}px` }} />
                 <Link className="button" to="/project" style={{ marginTop: `${offsetY * (1.5)}px` }} >Explore</Link>
-                <img src={rocks} alt="" className="rocks img-fluid" style={{ top: `${offsetY * (-0.12)}px` }} />
-                <img src={water} alt="" className="water img-fluid" />
+                <img src={rocks} alt="" className="rocks" style={{ top: `${offsetY * (-0.12)}px` }} />
+                <img src={water} alt="" className="water" />
             </div>
             <div className="container0">
                 <div className="container-fluid mt-5">

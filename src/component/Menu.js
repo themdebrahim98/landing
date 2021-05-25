@@ -64,7 +64,7 @@ const Menu = [
     },
     {
         id: 7,
-        image: "https://miro.medium.com/max/1706/1*HkMj2Z32AyWirHDDbq423A.png",
+        image: "https://assets.materialup.com/uploads/87c8669d-72b3-47e8-86bc-165000ed763f/chat-interaction--playing2.gif",
         name: "Chat Applicaton",
         category: "back",
         date: "05-04-2021",

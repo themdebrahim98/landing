@@ -103,6 +103,10 @@ ol {
 
 
 @media screen and (max-width: 768px) {
+  .container0{
+    padding-left: 0;
+    padding-right: 0;
+  }
   .section .text {
     font-size: 20vw;
   }

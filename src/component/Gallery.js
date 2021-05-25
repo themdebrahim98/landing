@@ -11,14 +11,14 @@ function Gallery() {
         setItems(updatedItems);
     }
     return (
-        <div className="galerry">
-            <div className="menu-tabs container">
-                <div className="menu-tab d-flex align-items-center justify-content-center">
-                    <button type="button" className="btn btn-outline-success mx-2 px-3 py-2 text-center" onClick={() => setItems(Menu)}>All</button>
-                    <button type="button" className="btn btn-outline-danger mx-2 px-3 py-2 text-center" onClick={() => filterItem('front')}>Front-end</button>
-                    <button type="button" className="btn btn-outline-danger mx-2 px-3 py-2 text-center" onClick={() => filterItem('back')}>Back-end</button>
-                    <button type="button" className="btn btn-outline-danger mx-2 px-3 py-2 text-center" onClick={() => filterItem('app')}>Web app</button>
-                    <button type="button" className="btn btn btn-outline-light btn-info mx-4 px-3 py-2 text-center" onClick={() => filterItem('upcoming')}>Coming</button>
+        <div className="gallery">
+            <div className="menu-tabs container col-md-12 col-12">
+                <div className="menu-tab">
+                    <button type="button" className="btn btn-outline-success mx-2 my-2 px-3 py-2 text-center" onClick={() => setItems(Menu)}>All</button>
+                    <button type="button" className="btn btn-outline-danger mx-2 my-2 px-3 py-2 text-center" onClick={() => filterItem('front')}>Front-end</button>
+                    <button type="button" className="btn btn-outline-danger mx-2 my-2 px-3 py-2 text-center" onClick={() => filterItem('back')}>Back-end</button>
+                    <button type="button" className="btn btn-outline-danger mx-2 my-2 px-3 py-2 text-center" onClick={() => filterItem('app')}>Web app</button>
+                    <button type="button" className="btn btn btn-outline-light btn-info mx-3 my-2 px-3 py-2 text-center" onClick={() => filterItem('upcoming')}>Coming</button>
                 </div>
             </div>
             {/* Main items section */}
