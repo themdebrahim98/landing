@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is created by [Arghadeep Mallick](https://arghadeep.tech).
+This is our web development community [REPL](https://werepl.netlify.app) landing page.
 
 ## Available Scripts
 
