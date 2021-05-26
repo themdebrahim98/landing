@@ -4,7 +4,6 @@ import './Project.css'
 import Gallery from './component/Gallery.js';
 import Lottie from 'react-lottie';
 import project from './json/project-management.json';
-import { IconButton } from '@material-ui/core';
 
 const aniProject = {
     loop: true,

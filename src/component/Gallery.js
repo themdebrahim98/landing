@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './tab.css';
+import './Gallery.css';
 import Menu from './Menu';
 
 function Gallery() {

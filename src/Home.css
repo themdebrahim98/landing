@@ -6,7 +6,7 @@ ol {
   font-size: 25px;
 }
 .home {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   z-index: -1;
 }

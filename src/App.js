@@ -40,10 +40,9 @@ function App() {
         .then((outBuff) => {
           setData(outBuff);
           setLoading(true);
-
           setTimeout(() => {
             setCompleted(true);
-          }, 1000);
+          }, 1100);
         });
     }, 2000);
   }, [data]);

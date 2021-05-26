@@ -1,11 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import sKarmakar from './images/sourav_karmakar.jpg';
-import aSharma from './images/amanSharma.jpeg';
-import sSony from './images/sudhanshu.jpeg';
-import sOjha from './images/SumanOjha.png';
-import aMallick from './images/Arghadeep.jpg';
 import './Carousel.css';
+import Member from './component/Member';
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Autoplay, Navigation } from 'swiper/core';
@@ -13,116 +9,37 @@ import { IconButton } from '@material-ui/core';
 SwiperCore.use([Autoplay, Navigation]);
 
 function Carousel() {
+    const [item] = useState(Member);
     return (
-        <div>
+        <div className="container-fluid">
             <Swiper spaceBetween={30} centeredSlides={true} autoplay={{
-                "delay": 1000,
+                "delay": 1500,
                 "disableOnInteraction": false
-            }} loop={true} loopFillGroupWithBlank={true} navigation={true} className="mySwiper">
-                <SwiperSlide>
-                    <div class="img-box">
-                        <img src={sKarmakar} alt="" />
-                    </div>
-                    <div className="text-box">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias a error, perspiciatis et quis molestiae officiis repellendus quasi doloribus nostrum, odio expedita dolorem aspernatur. Illo corrupti mollitia assumenda ipsam accusantium?
-                    </div>
-                    <div class="img-bio">
-                        <h3>sourav karmakar</h3>
-                        <h5>Head</h5>
-                    </div>
-                    <div className="social">
-                        <IconButton><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
-                        <IconButton><a href="https://github.com"><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
-                        <IconButton><a href="https://facebook.com"><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="img-box">
-                        <img src={aMallick} alt="" />
-                    </div>
-                    <div className="text-box">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias a error, perspiciatis et quis molestiae officiis repellendus quasi doloribus nostrum, odio expedita dolorem aspernatur. Illo corrupti mollitia assumenda ipsam accusantium?
-                    </div>
-                    <div class="img-bio">
-                        <h3>arghadeep mallick</h3>
-                        <h5>Manager</h5>
-                    </div>
-                    <div className="social">
-                        <IconButton><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
-                        <IconButton><a href="https://github.com"><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
-                        <IconButton><a href="https://facebook.com"><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="img-box">
-                        <img src={sSony} alt="" />
-                    </div>
-                    <div className="text-box">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias a error, perspiciatis et quis molestiae officiis repellendus quasi doloribus nostrum, odio expedita dolorem aspernatur. Illo corrupti mollitia assumenda ipsam accusantium?
-                    </div>
-                    <div class="img-bio">
-                        <h3>sudhanshu kumar</h3>
-                        <h5>Manager</h5>
-                    </div>
-                    <div className="social">
-                        <IconButton><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
-                        <IconButton><a href="https://github.com"><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
-                        <IconButton><a href="https://facebook.com"><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="img-box">
-                        <img src={sOjha} alt="" />
-                    </div>
-                    <div className="text-box">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias a error, perspiciatis et quis molestiae officiis repellendus quasi doloribus nostrum, odio expedita dolorem aspernatur. Illo corrupti mollitia assumenda ipsam accusantium?
-                    </div>
-                    <div class="img-bio">
-                        <h3>suman ojha</h3>
-                        <h5>Manager</h5>
-                    </div>
-                    <div className="social">
-                        <IconButton><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
-                        <IconButton><a href="https://github.com"><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
-                        <IconButton><a href="https://facebook.com"><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="img-box">
-                        <img src={aSharma} alt="" />
-                    </div>
-                    <div className="text-box">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias a error, perspiciatis et quis molestiae officiis repellendus quasi doloribus nostrum, odio expedita dolorem aspernatur. Illo corrupti mollitia assumenda ipsam accusantium?
-                    </div>
-                    <div class="img-bio">
-                        <h3>aman sharma</h3>
-                        <h5>Manager</h5>
-                    </div>
-                    <div className="social">
-                        <IconButton><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
-                        <IconButton><a href="https://github.com"><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
-                        <IconButton><a href="https://facebook.com"><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="img-box">
-                        <img src="https://raw.githubusercontent.com/sksony-234/tempRepl/master/slide2/img/ebrahim.jpeg" alt="" />
-                    </div>
-                    <div className="text-box">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias a error, perspiciatis et quis molestiae officiis repellendus quasi doloribus nostrum, odio expedita dolorem aspernatur. Illo corrupti mollitia assumenda ipsam accusantium?
-                    </div>
-                    <div class="img-bio">
-                        <h3>md. ebrahim</h3>
-                        <h5>Manager</h5>
-                    </div>
-                    <div className="social">
-                        <IconButton><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
-                        <IconButton><a href="https://github.com"><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
-                        <IconButton><a href="https://facebook.com"><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
-                    </div>
-                </SwiperSlide>
-
-
+            }} loop={true} loopFillGroupWithBlank={true} navigation={false} className="mySwiper">
+                {
+                    item.map((elem) => {
+                        const { name, position, image, comment, facebook, linkedin, github } = elem;
+                        return (
+                            <SwiperSlide className="slide-animation">
+                                <div class="img-box">
+                                    <img src={image} alt={name} />
+                                </div>
+                                <div className="text-box">
+                                    {comment}
+                                </div>
+                                <div class="img-bio">
+                                    <h3>{name}</h3>
+                                    <h5>{position}</h5>
+                                </div>
+                                <div className="social">
+                                    <IconButton><a href={linkedin}><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
+                                    <IconButton><a href={github}><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
+                                    <IconButton><a href={facebook}><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })
+                }
             </Swiper>
         </div>
     )

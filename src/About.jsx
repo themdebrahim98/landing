@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './About.css';
 import Footer from './Footer';
 import Carousel from './Carousel.js';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { IconButton } from '@material-ui/core';
 import Lottie from 'react-lottie';
-import student from './json/student.json'
+import student from './json/student.json';
+import Features from './component/Features.js';
 
 const aniStudent = {
     loop: true,
@@ -16,6 +17,7 @@ const aniStudent = {
     }
 };
 function About() {
+    const [item] = useState(Features);
     return (
         <div className="about">
             <div className="container-fluid mt-5 about-style">
@@ -25,9 +27,7 @@ function About() {
                         <p class="text-center sub-heading">Grow idea with us</p>
                         <div className="row">
                             <div className="col-md-6 col-12">{/*left side*/}
-                                {/*<img src={about} alt="" />*/}
                                 <Lottie options={aniStudent} />
-
                             </div>
                             <div className="about-side col-md-6 col-12 d-flex justify-content-center align-items-center flex-column">
                                 {/*right side*/}
@@ -56,65 +56,27 @@ function About() {
                     <div class="col-md-6 col-12">
                         <div class="section-title">
                             <h1 class="title">Features</h1>
-                            <h2 class="subtitle">Lorem ipsum dolor sit amet.</h2>
+                            <h2 class="subtitle">Commonly we work on</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    {/*features item 1 start*/}
-                    <div class="col-md-6 col-lg-4 col-12 d-flex">
-                        <div class="col-lg-12 features-item">
-                            <div class="icon"><i class="fas fa-database"></i></div>
-                            <h3>Notification</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque officia minima placeat.</p>
-                        </div>
-                    </div>
-                    {/*features item 1 ends*/}
-                    {/*features item 2 start*/}
-                    <div class="col-md-6 col-lg-4 col-12 d-flex">
-                        <div class="col-lg-12 features-item">
-                            <div class="icon"><i class="fas fa-wifi"></i></div>
-                            <h3>Notification</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque officia minima placeat.</p>
-                        </div>
-                    </div>
-                    {/*features item 2 ends*/}
-                    {/*features item 3 start*/}
-                    <div class="col-md-6 col-lg-4 col-12 d-flex">
-                        <div class="col-lg-12 features-item">
-                            <div class="icon"><i class="fas fa-laptop-code"></i></div>
-                            <h3>Notification</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque officia minima placeat.</p>
-                        </div>
-                    </div>
-                    {/*features item 3 ends*/}
-                    {/*features item 4 start*/}
-                    <div class="col-md-6 col-lg-4 col-12 d-flex">
-                        <div class="col-lg-12 features-item">
-                            <div class="icon"><i class="fas fa-terminal"></i></div>
-                            <h3>Notification</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque officia minima placeat.</p>
-                        </div>
-                    </div>
-                    {/*features item 4 ends*/}
-                    {/*features item 5 start*/}
-                    <div class="col-md-6 col-lg-4 col-12 d-flex">
-                        <div class="col-lg-12 features-item">
-                            <div class="icon"><i class="fas fa-book-open"></i></div>
-                            <h3>Notification</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque officia minima placeat.</p>
-                        </div>
-                    </div>
-                    {/*features item 5 ends*/}
-                    {/*features item 6 start*/}
-                    <div class="col-md-6 col-lg-4 col-12 d-flex">
-                        <div class="col-lg-12 features-item">
-                            <div class="icon"><i class="fas fa-shield-alt"></i></div>
-                            <h3>Notification</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque officia minima placeat.</p>
-                        </div>
-                    </div>
-                    {/*features item 6 ends*/}
+                    {/*features item start*/}
+                    {
+                        item.map((elem) => {
+                            const { icon, name, text } = elem;
+                            return (
+                                <div class="col-md-6 col-lg-4 col-12 d-flex">
+                                    <div class="col-lg-12 features-item">
+                                        <div class="icon"><i class={icon}></i></div>
+                                        <h3>{name}</h3>
+                                        <p>{text}</p>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                    {/*features item ends*/}
                 </div>
             </div>
             <Footer />

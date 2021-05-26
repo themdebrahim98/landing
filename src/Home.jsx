@@ -39,12 +39,12 @@ function Home() {
     return (
         <div className="home">
             <div className="section">
-                <h2 className="text" style={{ transform: `translateY(${offsetY * (-0.5)}%)` }} ><span>Let's Code Together on</span><br />webDev</h2>
-                <img src={bird1} alt="" className="bird1" style={{ left: `${offsetY * (2)}px`, top: `${offsetY * (-1.5)}px` }} />
-                <img src={bird2} alt="" className="bird2" style={{ top: `${offsetY * (-1.5)}px`, left: `${offsetY * (-5)}px` }} />
+                <h2 className="text" style={{ transform: `translateY(${offsetY * (-0.9)}%)` }} ><span>Let's Code Together on</span><br />webDev</h2>
+                <img src={bird1} alt="" className="bird1" style={{ left: `${offsetY * (1.5)}px`, top: `${offsetY * (-1.4)}px` }} />
+                <img src={bird2} alt="" className="bird2" style={{ top: `${offsetY * (-1.5)}px`, left: `${offsetY * (-4)}px` }} />
                 <img src={forest} alt="" className="forest" style={{ top: `${offsetY * (0.25)}px` }} />
-                <Link className="button" to="/project" style={{ marginTop: `${offsetY * (1.5)}px` }} >Explore</Link>
-                <img src={rocks} alt="" className="rocks" style={{ top: `${offsetY * (-0.12)}px` }} />
+                <Link className="button" to="/project" style={{ marginTop: `${offsetY * (1.4)}px` }} >Explore</Link>
+                <img src={rocks} alt="" className="rocks" style={{ top: `${offsetY * (-0.10)}px` }} />
                 <img src={water} alt="" className="water" />
             </div>
             <div className="container0">
