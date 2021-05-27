@@ -8,14 +8,14 @@ import forest from './images/forest.png';
 import rocks from './images/rocks.png';
 import water from './images/water.png';
 import Lottie from 'react-lottie';
-import development from './json/development.json';
+import student from './json/student.json';
 import code from './json/codeblock.json';
 
 
-const aniDev = {
+const aniStudent = {
     loop: true,
     autoplay: true,
-    animationData: development,
+    animationData: student,
     rendererSettings: {
         preserveAspectRatio: "xMidYMid slice"
     }
@@ -60,7 +60,7 @@ function Home() {
                                     <li><p>This web development community follows one unique motto "Let's Code Together". In a good spirit, We welcome all programmers to join us and showcase talent as well as grow with us.</p></li></ol>
                                 </div>
                                 <div className="sec2 col-md-6 col-12">
-                                    <Lottie options={aniDev} />
+                                    <Lottie options={aniStudent} />
                                 </div>
                             </div>
                         </div>

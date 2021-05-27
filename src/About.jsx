@@ -3,18 +3,8 @@ import './About.css';
 import Footer from './Footer';
 import Carousel from './Carousel.js';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Lottie from 'react-lottie';
-import student from './json/student.json';
 import Features from './component/Features.js';
 
-const aniStudent = {
-    loop: true,
-    autoplay: true,
-    animationData: student,
-    rendererSettings: {
-        preserveAspectRatio: "xMidYMid slice"
-    }
-};
 function About() {
     const [item] = useState(Features);
     return (
@@ -25,11 +15,8 @@ function About() {
                         <h1 class="text-center main-heading">About</h1>
                         <p class="text-center sub-heading">Grow idea with us</p>
                         <div className="row">
-                            <div className="col-md-6 col-12">{/*left side*/}
-                                <Lottie options={aniStudent} />
-                            </div>
                             <div className="about-side col-md-6 col-12 d-flex justify-content-center align-items-center flex-column">
-                                {/*right side*/}
+                                {/*Left side*/}
                                 <div class="section-title">
                                     <h1 class="title">introduction</h1>
                                     <h2 class="subtitle"> Who Are We? <hr /></h2>
@@ -44,14 +31,10 @@ function About() {
                                     </ul>
                                 </div>
                             </div>
+                            <div className="col-md-6 col-12">{/*Right side*/}
+                                <Carousel />
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-md-12 col-12">
-                        <Carousel />
                     </div>
                 </div>
             </div>

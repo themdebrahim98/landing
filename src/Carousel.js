@@ -10,6 +10,7 @@ SwiperCore.use([Autoplay, Navigation]);
 function Carousel() {
     const [item] = useState(Member);
     return (
+        <div className="container-fluid">
         <Swiper spaceBetween={30} autoplay={{
             "delay": 1500,
             "disableOnInteraction": false
@@ -39,6 +40,7 @@ function Carousel() {
                 })
             }
         </Swiper>
+        </div>
     )
 }
 

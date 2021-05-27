@@ -23,6 +23,9 @@ function Project() {
                         <h1 class="text-center main-heading">Explore</h1>
                         <p class="text-center sub-heading">Show match with us</p>
                         <div className="row">
+                            <div className="col-md-6 col-12">
+                                <Lottie options={aniProject} />
+                            </div>
                             <div className="col-md-6 col-12 d-flex justify-content-center align-items-center flex-column">
                                 <div class="section-title">
                                     <h1 class="title">Project</h1>
@@ -35,9 +38,6 @@ function Project() {
                                     <br />
                                     <p>Mainly we provide knowledge on various technologies and try to build influential communication network among all programmer by online meetings.</p>
                                 </div>
-                            </div>
-                            <div className="col-md-6 col-12">
-                                <Lottie options={aniProject} />
                             </div>
                         </div>
                     </div>
