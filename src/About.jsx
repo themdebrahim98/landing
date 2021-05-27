@@ -49,7 +49,13 @@ function About() {
                     </div>
                 </div>
             </div>
-            <Carousel />
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-12 col-12">
+                        <Carousel />
+                    </div>
+                </div>
+            </div>
             {/* Another Division */}
             <div class="container features-section">
                 <div class="row justify-content-center">
@@ -60,7 +66,7 @@ function About() {
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                     {/*features item start*/}
                     {
                         item.map((elem) => {

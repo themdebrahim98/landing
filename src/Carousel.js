@@ -11,37 +11,35 @@ SwiperCore.use([Autoplay, Navigation]);
 function Carousel() {
     const [item] = useState(Member);
     return (
-        <div className="container-fluid">
-            <Swiper spaceBetween={30} centeredSlides={true} autoplay={{
-                "delay": 1500,
-                "disableOnInteraction": false
-            }} loop={true} loopFillGroupWithBlank={true} navigation={false} className="mySwiper">
-                {
-                    item.map((elem) => {
-                        const { name, position, image, comment, facebook, linkedin, github } = elem;
-                        return (
-                            <SwiperSlide className="slide-animation">
-                                <div class="img-box">
-                                    <img src={image} alt={name} />
-                                </div>
-                                <div className="text-box">
-                                    {comment}
-                                </div>
-                                <div class="img-bio">
-                                    <h3>{name}</h3>
-                                    <h5>{position}</h5>
-                                </div>
-                                <div className="social">
-                                    <IconButton><a href={linkedin}><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
-                                    <IconButton><a href={github}><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
-                                    <IconButton><a href={facebook}><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
-                                </div>
-                            </SwiperSlide>
-                        )
-                    })
-                }
-            </Swiper>
-        </div>
+        <Swiper spaceBetween={30} autoplay={{
+            "delay": 1500,
+            "disableOnInteraction": false
+        }} loop={true} loopFillGroupWithBlank={true} navigation={true} className="mySwiper d-flex">
+            {
+                item.map((elem) => {
+                    const { name, position, image, comment, facebook, linkedin, github } = elem;
+                    return (
+                        <SwiperSlide className="slide-animation">
+                            <div class="img-box">
+                                <img src={image} alt={name} />
+                            </div>
+                            <div className="text-box">
+                                {comment}
+                            </div>
+                            <div class="img-bio">
+                                <h3>{name}</h3>
+                                <h5>{position}</h5>
+                            </div>
+                            <div className="social">
+                                <IconButton><a href={linkedin}><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
+                                <IconButton><a href={github}><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
+                                <IconButton><a href={facebook}><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
+                            </div>
+                        </SwiperSlide>
+                    )
+                })
+            }
+        </Swiper>
     )
 }
 
