@@ -3,7 +3,6 @@ import './About.css';
 import Footer from './Footer';
 import Carousel from './Carousel.js';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { IconButton } from '@material-ui/core';
 import Lottie from 'react-lottie';
 import student from './json/student.json';
 import Features from './component/Features.js';
@@ -38,10 +37,10 @@ function About() {
                                 <div class="intro-content">
                                     <p>We are Computer Science Engineering and Information Technology Students in MAKAUT,W.B. We opened a community together. So, we basically work on the website development. We aslo work as a freelancer.</p>
                                     <ul class="list-unstyled">
-                                        <li><IconButton><i class="fas fa-check"></i></IconButton> Lorem ipsum dolor sit amet. </li>
-                                        <li><IconButton><i class="fas fa-check"></i></IconButton>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                        <li><IconButton><i class="fas fa-check"></i></IconButton> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                                        <li><IconButton><i class="fas fa-check"></i></IconButton>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eos!</li>
+                                        <li><i class="fas fa-check"></i> Lorem ipsum dolor sit amet. </li>
+                                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                        <li><i class="fas fa-check"></i> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eos!</li>
                                     </ul>
                                 </div>
                             </div>

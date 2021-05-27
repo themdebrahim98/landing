@@ -71,6 +71,8 @@
 .social i {
   padding: 5px;
   margin: 5px;
+  text-shadow: 0.2rem 0.2rem 1rem #111;
+  font-size: 25px;
 }
 .fa-linkedin,
 .fa-github,
@@ -79,7 +81,6 @@
 }
 .slide-animation:hover .img-box,
 .slide-animation:hover .img-bio,
-.text-box:hover,
 .social .fa-linkedin:hover,
 .social .fa-github:hover,
 .social .fa-facebook:hover {

@@ -5,7 +5,6 @@ import Member from './component/Member';
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Autoplay, Navigation } from 'swiper/core';
-import { IconButton } from '@material-ui/core';
 SwiperCore.use([Autoplay, Navigation]);
 
 function Carousel() {
@@ -14,7 +13,7 @@ function Carousel() {
         <Swiper spaceBetween={30} autoplay={{
             "delay": 1500,
             "disableOnInteraction": false
-        }} loop={true} loopFillGroupWithBlank={true} navigation={true} className="mySwiper d-flex">
+        }} loop={true} loopFillGroupWithBlank={true} navigation={true} className="mySwiper">
             {
                 item.map((elem) => {
                     const { name, position, image, comment, facebook, linkedin, github } = elem;
@@ -31,9 +30,9 @@ function Carousel() {
                                 <h5>{position}</h5>
                             </div>
                             <div className="social">
-                                <IconButton><a href={linkedin}><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a></IconButton>
-                                <IconButton><a href={github}><i class="fa fa-github" style={{ color: "#333" }}></i></a></IconButton>
-                                <IconButton><a href={facebook}><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a></IconButton>
+                                <a href={linkedin}><i class="fa fa-linkedin" style={{ color: "#0077b5" }}></i></a>
+                                <a href={github}><i class="fa fa-github" style={{ color: "#333" }}></i></a>
+                                <a href={facebook}><i class="fa fa-facebook" style={{ color: "	#4267B2" }}></i></a>
                             </div>
                         </SwiperSlide>
                     )
