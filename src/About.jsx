@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './About.css';
 import Footer from './Footer';
-import Carousel from './Carousel.js';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Features from './component/Features.js';
+import Carousel from './component/Carousel.js';
 
 function About() {
     const [item] = useState(Features);

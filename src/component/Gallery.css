@@ -88,3 +88,9 @@
   color: whitesmoke;
   outline: none;
 }
+@media screen and (max-width: 786px) {
+  .gallery img{
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 12px;
+  }
+}

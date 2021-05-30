@@ -1,16 +1,8 @@
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide {
-  position: absolute;
-  text-align: center;
-  font-size: 18px;
+.swiper-slide{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: transparent;
 }
 .slide-animation {
   transition: all 0.3s ease-in-out;
@@ -30,7 +22,7 @@
 .text-box {
   width: 90%;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 17px;
   color: #111;
   padding: 0 15px;
   margin: auto 15px;
@@ -45,7 +37,7 @@
   font-family: "Kaushan Script", cursive;
   transition: all 0.3s ease-in-out;
 }
-.img-bio h3 {
+.img-bio h4 {
   letter-spacing: 2px;
   text-transform: uppercase;
   position: relative;
@@ -70,19 +62,21 @@
 }
 .fa-linkedin,
 .fa-github,
-.fa-facebook {
+.fa-facebook,
+.fa-whatsapp {
   transition: all 0.3s ease-in-out;
 }
 .slide-animation:hover .img-box,
 .slide-animation:hover .img-bio,
 .social .fa-linkedin:hover,
 .social .fa-github:hover,
-.social .fa-facebook:hover {
+.social .fa-facebook:hover,
+.social .fa-whatsapp:hover {
   transform: scale(1.1);
 }
 @media screen and (max-width: 376px) {
   .text-box {
-    font-size: 16px;
+    font-size: 15px;
     width: 80%;
   }
   .img-bio h1 {
