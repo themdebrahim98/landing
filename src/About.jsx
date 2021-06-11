@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Features from './component/Features.js';
 import Carousel from './component/Carousel.js';
 
+
 function About() {
     const [item] = useState(Features);
     return (
@@ -66,6 +67,9 @@ function About() {
                     {/*features item ends*/}
                 </div>
             </div>
+           
+
+
             <Footer />
         </div>
     )

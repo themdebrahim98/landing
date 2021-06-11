@@ -1,32 +1,20 @@
 import React, { useState } from 'react';
 import './Gallery.css';
 import Menu from './Menu';
+import { Link } from 'react-router-dom'
+import PopUpBox from './PopUpBox/PopUpBox.jsx'
+import './PopUpBox/PopUpBox.css'
 
-import swal from 'sweetalert';
+
+
 
 
 function Gallery() {
 	const [items, setItems] = useState(Menu);
 	const [active, setactive] = useState(null);
 
-	const eventcall = () => {
-		swal({
-			title: "Are you sure?",
-			text: "Connect With Us",
-			icon: "warning",
-			buttons: true,
-			dangerMode: true,
-		  })
-		  .then((willDelete) => {
-			if (willDelete) {
-			  swal("Welcome", {
-				icon: "success",
-			  });
-			} else {
-			  swal("Your imaginary file is safe!");
-			}
-		  });
-	}
+	const [activecardid, setActivecardid] = useState(null);
+
 
 
 	const filterItem = (catItem) => {
@@ -35,13 +23,25 @@ function Gallery() {
 		});
 		setItems(updatedItems);
 	}
+
+	const ShowPopUpBox = (id) => {
+	
+		setActivecardid(id)
+		
+
+	}
+
+
 	return (
 		<>
 
-		
+
+
 
 
 			<div className="gallery">
+
+
 				<div className="menu-tabs container col-md-12 col-12">
 					<div className="menu-tab">
 						<button type="button" className="btn btn-outline-success mx-2 my-2 px-3 py-2 text-center" onClick={() => setItems(Menu)}>All</button>
@@ -58,7 +58,7 @@ function Gallery() {
 							<div className="row my-5">
 								{
 									items.map((elem) => {
-										const { image, name, description, date, link } = elem;
+										const { id, image, name, description, date, link } = elem;
 										return (
 											<div className="item1 col-md-6 col-lg-6 col-lg-6 col-xl-4 my-3">
 												<div className="row item-inside">
@@ -75,14 +75,20 @@ function Gallery() {
 														<div className="menu-price-book">
 															<div className="price-book-divide d-flex justify-content-between">
 																<h2>Date: {date}</h2>
-																<a href={link}>
-																	<button onClick={eventcall} className="btn btn-primary py-2">Click mee</button>
-																</a>
+
+
+																<button onClick={() => { ShowPopUpBox(id) }} className="btn btn-primary py-2">Click mee</button>
+
+
 															</div>
 
 														</div>
 													</div>
 												</div>
+
+												{
+													activecardid === id ? < PopUpBox popupfadingclass="popupfadingclass" name={name} description={description} link={link}/> : null
+												}
 											</div>
 										)
 									})
