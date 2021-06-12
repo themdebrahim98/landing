@@ -5,7 +5,7 @@ const Menu = [
         name: "Profile",
         category: "front",
         date: "20-11-2020",
-        link: './component/PopUpBox/PopUpBox',
+        link: '/singup',
         description: "This is a Front-end project. Made by all community members"
     },
     {

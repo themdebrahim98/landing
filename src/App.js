@@ -64,7 +64,6 @@ function App() {
           <Route exact path='/project' component={Project} />
           <Route exact path='/about' component={About} />
           <Route exact path='/' component={Home} />
-          <Route exact path='./component/PopUpBox/PopUpBox' component={PopUpBox} />
           <Redirect to="/" />
         </Switch>
       </div>

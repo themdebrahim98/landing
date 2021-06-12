@@ -7,13 +7,12 @@ import './PopUpBox/PopUpBox.css'
 
 
 
-
-
 function Gallery() {
 	const [items, setItems] = useState(Menu);
 	const [active, setactive] = useState(null);
 
 	const [activecardid, setActivecardid] = useState(null);
+	const [popUpBoxshowingclass, setPopUpBoxshowingclass] = useState('popupcloseclass')
 
 
 
@@ -25,9 +24,18 @@ function Gallery() {
 	}
 
 	const ShowPopUpBox = (id) => {
-	
-		setActivecardid(id)
-		
+
+		setActivecardid(id);
+		setPopUpBoxshowingclass("popupshowingclass");
+
+
+	}
+
+	const ClosePopBox = () => {
+		console.log("pop");
+
+		setPopUpBoxshowingclass("popupcloseclass");
+
 
 	}
 
@@ -87,7 +95,7 @@ function Gallery() {
 												</div>
 
 												{
-													activecardid === id ? < PopUpBox popupfadingclass="popupfadingclass" name={name} description={description} link={link}/> : null
+													activecardid === id ? < PopUpBox popUpBoxshowingclass={popUpBoxshowingclass} popuptoggleevent = {ClosePopBox} popupfadingclass="popupfadingclass" name={name} description={description} link={link} /> : null
 												}
 											</div>
 										)
